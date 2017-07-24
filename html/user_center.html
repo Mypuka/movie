@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--为了兼容手机端，此上三个标签之前不能加东西-->
+  <title>Bootstrap 101 Template</title>
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/user_center.css" rel="stylesheet">
+</head>
+<body ng-controller="user">
+<div id="header" class="navbar navbar-default navbar-fixed-top"><!--导航-->
+  <div class="container">
+    <div class="navbar-header"><!--导航栏header部分-->
+      <a href="index.html" class="navbar-brand">Movie</a>
+      <a href="#my-collapse-menu" data-toggle="collapse" class="navbar-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="my-collapse-menu"><!--导航栏collapse部分-->
+      <ul class="nav navbar-nav">
+        <li><a href="user_center.html"><span id="music-user">我</span>喜欢的电影</a></li>
+        <li><a href="movie_show.html">发现新大陆</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#register" data-toggle="modal">登录</a></li>
+        <li><a href="#login" data-toggle="modal">注册</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="modal" id="register" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        用户登录 <span></span>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="form-horizontal" id="from-register">
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="username" class="control-label">用户名</label>
+            </div>
+            <div class="col-sm-7 col-xs-8">
+              <input id="username" name="username" type="text" class="form-control" placeholder="2-9位的中文，英文或数字..."/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="userpwd" class="control-label">密码</label>
+            </div>
+            <div class="col-sm-7 col-xs-8">
+              <input id="userpwd" name="userpwd" type="password" class="form-control" placeholder="8-12位数字，字母，下划线组合..."/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn bg-info" id="tologin">没有账号？</a>
+        <a href="#" class="btn bg-info" id="register-btn">登录</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="login" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        用户注册 <span></span>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="form-horizontal" id="from-login">
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="uname" class="control-label">用户名</label>
+            </div>
+            <div class="col-sm-6 col-xs-8">
+              <input id="uname" name="uname" type="text" class="form-control" placeholder="2-9位的中文，英文或数字..."/>
+            </div>
+            <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+              <span class="help-block"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="upwd" class="control-label">密码</label>
+            </div>
+            <div class="col-sm-6 col-xs-8">
+              <input id="upwd" name="upwd" type="password" class="form-control" placeholder="6-12位数字，字母，下划线组合..."/>
+            </div>
+            <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+              <span class="help-block"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="rpwd" class="control-label">确认密码</label>
+            </div>
+            <div class="col-sm-6 col-xs-8">
+              <input id="rpwd" name="rpwd" type="password" class="form-control" placeholder="请再次输入您的密码..."/>
+            </div>
+            <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+              <span class="help-block"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn bg-info" >传送门:</a>
+        <a href="#" class="btn bg-info" id="toregister">我要登录！</a>
+        <a href="#" class="btn bg-info" id="login-btn">注册</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="user_main" class="container">
+  <div class="row">
+    <div class="col-sm-3 col-xs-12">
+      <div class="list-group" id="aside">
+        <ul class="list-unstyled">
+          <li class="list-group-item active"><a href="#">我的收藏</a></li>
+          <li class="list-group-item"><a href="#">动作片</a></li>
+          <li class="list-group-item"><a href="#">科幻片</a></li>
+          <li class="list-group-item"><a href="#">爱情片</a></li>
+          <li class="list-group-item"><a href="#">战争片</a></li>
+          <li class="list-group-item"><a href="#">惊悚片</a></li>
+          <li class="list-group-item"><a href="#">警匪片</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+      <div class="" id="redio">
+        <h1 class="alert alert-danger">Let's see a movie for a change</h1>
+        </table>
+        <div>
+          <div class="alert alert-success">This's My Left</div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="../imgs/todaycat3.jpg">
+                <div class="caption">
+                  <h3>机械师2：复活 <small><a href="#">主演：杰森·斯坦森</a></small></h3>
+                  <p><a href="#" class="btn btn-warning btn-block" role="button">前去观看>></a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="well">
+                <h3 class="text-danger">郭达·斯坦森最新作品，值得一看。</h3>
+                <p><b>剧情介绍：</b> <br/> <small>顶级杀手亚瑟（杰森·斯坦森饰）被迫再度从事刺客工作，他必须完成一系列不可能的刺杀任务，而他的对手是世界上最危险的人。本以为他已经逃离了以前危险的生活，就此消失，但是某个人居然找到了他，并绑架了他所深爱的女人。为了他和他的爱人能够逃脱，亚瑟必须完成一系列暗杀任务，名单上的人则是世界上头号危险人物。</small> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+.<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/angular.js"></script>
+<script src="../js/user_center.js"></script>
+</body>
+</html>

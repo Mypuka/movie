@@ -1,0 +1,171 @@
+body{
+  margin-top: 50px ;
+  background: #FEE;
+  background: rgba(0,76,126,.8);
+  height: 2000px;
+}
+.fr{
+  float: right;
+}
+.fl{
+  float: left;
+}
+.hd{
+  display: none;
+}
+/*-------�ֲ�ͼ------*/
+#banner img{
+  width: 100%;
+}
+#main{
+  margin-top: 5rem;
+}
+/*-------------������-------------*/
+#search{
+  font-family: "museo-sans","Helvetica",Arial,"Lucida Grande",sans-serif;
+  color: rgba(0,0,0,.8);
+  font-weight: 300;
+  background-color:rgba(255,255,255,.5);
+  border: none;
+  box-shadow: none;
+}
+@media screen and (min-width: 750px){
+  #search{
+    position: absolute;
+    top: 20%;
+    left: 16%;
+    width: 51%;
+    height:70px;
+    font-size: 32px;
+  }
+}
+/*--------------�Ƽ�ר��-------------*/
+#main div.first-child>div{
+  margin-bottom: 6rem;
+}
+#main div.first-child small{
+  color: inherit;
+}
+#main div.first-child img{
+  margin: 0 auto;
+}
+#main div.first-child>div a:hover{
+  color: #ffffff;
+  text-decoration: none;
+}
+#main div.first-child>div a{
+  color: #24d4fa;
+  transition: color .6s;
+}
+#main div.first-child>div>div{
+  box-sizing: border-box;
+  width:128px;
+  height:128px;
+  padding-top: 2rem;
+  background:rgba(222,222,222,0.8);
+  position:absolute;
+  color: #000;
+  top: 0;
+
+}
+/*电影人介绍 */
+#main div.first-child>div .front,#main div.first-child>div .back{
+  transition: all 0.6s linear;
+  backface-visibility:hidden;
+}
+.front{
+  transform: rotateY(-180deg);
+}
+.back{
+  transform: rotateY(0deg);
+}
+/*--------��������-------*/
+#main a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #24d4fa;
+  transition: color .6s;
+}
+#main div.second-child{
+  -webkit-perspective: 4000px;
+}
+#main div.second-child .wrapper{
+  margin-top: 2rem;
+  cursor: pointer;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .6s;
+}
+#main div.second-child .wrapper img{
+  border-radius: 3px;
+  -webkit-transform: translateZ(47px);
+  -webkit-transition: all .6s;
+}
+#main div.second-child .wrapper span{
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(236, 241, 244, 1)), color-stop(100%, rgba(190, 202, 217, 1)));
+  position: absolute;
+  -webkit-transform: rotateX(-90deg) translateZ(50px);
+  -webkit-transition: all .6s;
+  display: block;
+  top: 0;
+  border-radius: 15px;
+  padding: 10px;
+  width: 290px;
+}
+#main div.second-child .wrapper span strong {
+  display: block;
+  margin: .2em 0 .5em 0;
+}
+#main div.second-child .wrapper:hover{
+  -webkit-transform: rotateX(95deg);
+}
+#main div.second-child .wrapper:hover img{
+  border-radius: 15px;
+}
+#main div.second-child .wrapper:hover span{
+  border-radius: 3px;
+}
+#main div.second-child li{
+  line-height: 3rem;
+  border-bottom: 1px #444 solid ;
+}
+#main div.second-child small{
+  color: #ccc;
+}
+#main div.second-child{
+  margin-bottom: 5rem;
+  background: rgba(66,6,126,.5);
+}
+#main div.second-child li.row{
+  background: #aaa;
+  line-height: 2rem;
+  padding: .5rem;
+}
+#main div.second-child li.row small{
+  color: #333;
+}
+#main div.second-child a:hover{
+  color: #fff;
+}
+#main div.second-child li.row small span{
+  width: 80%;
+}
+@media screen and (max-width: 768px){
+  #main div.second-child li.row small span{
+    width: 60%;
+  }
+}
+#footer a:hover{
+  -webkit-filter: brightness(10);
+}
+#footer{
+  padding-bottom: 5rem;
+}
+#footer a{
+  -webkit-filter:none;
+  transition:-webkit-filter 0.6s;
+}
+
+
+
+
+

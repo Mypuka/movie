@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+  font-family: 'SimHei';
+}
+h1,h2,h3{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.box{
+  background: #dfd;
+  border: 1px solid #383;
+  color:#383;
+  margin: 20px;
+  padding: 20px;
+}

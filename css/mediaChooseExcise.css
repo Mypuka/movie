@@ -1,0 +1,78 @@
+#aside li,#aside{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#aside{
+  background: #ffffdd;
+  width:20%;
+}
+
+#aside li{
+  width:80%;
+  margin:5px auto;
+  background: #ddd;
+  color: #000;
+}
+#bside{
+  background: #dfd;
+  width:20%;
+  padding:0px;
+  margin: 0px;
+}
+@media screen and (min-width:1000px)  {
+  #artical{
+    width:60%;
+    background:yellow;
+    color: #000;
+  }
+  #artical img{
+    width:25%;
+  }
+  #artical{
+    float: left;
+  }
+  #aside{
+    float: left;
+  }
+  #bside{
+    float: left;
+  }
+}
+@media screen and (min-width:700px) and (max-width:1000px){
+  #artical{
+    width:80%;
+    background:yellow;
+    color: #000;
+  }
+  #artical img{
+    width:25%;
+  }
+  #artical{
+    float: left;
+  }
+  #aside{
+    float: left;
+  }
+  #bside{
+    display:none;
+    float: left;
+  }
+}
+@media screen and (max-width:700px){
+  #aside{
+    width:100%;
+  }
+  #artical{
+    width:100%;
+    background:yellow;
+    color: #000;
+  }
+  #artical img{
+    width:50%;
+  }
+  #bside{
+    display:none;
+    float: left;
+  }
+}

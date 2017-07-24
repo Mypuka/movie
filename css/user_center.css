@@ -1,0 +1,22 @@
+body{
+  margin-top: 60px;
+  background: url("../imgs/user_center_bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+#user_main table tr.warning td{
+  padding:3% 0;
+}
+.ctime{
+  width: 15%;
+}
+.well{
+  opacity: 0.7;
+}
+div.well{
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.list-group-item.active>a{
+  color: #fff;
+}

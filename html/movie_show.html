@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="show">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--为了兼容手机端，此上三个标签之前不能加东西-->
+  <title>angular</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/moive_show.css" rel="stylesheet">
+</head>
+<body>
+<div id="header" class="navbar navbar-default navbar-fixed-top"><!--导航-->
+  <div class="container">
+    <div class="navbar-header"><!--导航栏header部分-->
+      <a href="index.html" class="navbar-brand">Music Cat</a>
+      <a href="#my-collapse-menu" data-toggle="collapse" class="navbar-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="my-collapse-menu"><!--导航栏collapse部分-->
+      <ul class="nav navbar-nav">
+        <li><a href="user_center.html"><span id="music-user">我</span>喜欢的电影</a></li>
+        <li><a href="movie_show.html">发现新大陆</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#register" data-toggle="modal">登录</a></li>
+        <li><a href="#login" data-toggle="modal">注册</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="modal" id="register" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        用户登录 <span></span>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="form-horizontal" id="from-register">
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="username" class="control-label">用户名</label>
+            </div>
+            <div class="col-sm-7 col-xs-8">
+              <input id="username" name="username" type="text" class="form-control" placeholder="2-9位的中文，英文或数字..."/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="userpwd" class="control-label">密码</label>
+            </div>
+            <div class="col-sm-7 col-xs-8">
+              <input id="userpwd" name="userpwd" type="password" class="form-control" placeholder="8-12位数字，字母，下划线组合..."/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn bg-info" id="register-btn">登录</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="login" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <span class="close" data-dismiss="modal">&times;</span>
+      <div class="modal-header">
+        用户注册 <span></span>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="form-horizontal" id="from-login">
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="uname" class="control-label">用户名</label>
+            </div>
+            <div class="col-sm-6 col-xs-8">
+              <input id="uname" name="uname" type="text" class="form-control" placeholder="2-9位的中文，英文或数字..."/>
+            </div>
+            <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+              <span class="help-block"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="upwd" class="control-label">密码</label>
+            </div>
+            <div class="col-sm-6 col-xs-8">
+              <input id="upwd" name="upwd" type="password" class="form-control" placeholder="6-12位数字，字母，下划线组合..."/>
+            </div>
+            <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+              <span class="help-block"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-2 col-xs-4 text-right">
+              <label for="rpwd" class="control-label">确认密码</label>
+            </div>
+            <div class="col-sm-6 col-xs-8">
+              <input id="rpwd" name="rpwd" type="password" class="form-control" placeholder="请再次输入您的密码..."/>
+            </div>
+            <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+              <span class="help-block"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn bg-info" id="login-btn">注册</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="main" class="container">
+  <div class="container-fluid" >
+    <!--  会员专区  -->
+    <div ng-controller="show_vip">
+      <div class="row">
+        <div class="alert alert-info">会员专区</div>
+        <ul class="list-unstyled">
+          <li class="col-sm-3 col-sm-6 col-xs-6" ng-repeat="vdo in show">
+            <img class="img-responsive" ng-src="../imgs/{{vdo.img}}" alt=""/>
+            <div class="half-mask">
+              <h4><a href="">{{vdo.name}} </a></h4>
+              <h5>主演：{{vdo.start}}</h5>
+              <p> 剧情介绍 ：{{vdo.detail}} <a href="#">了解更多</a>  </p>
+              <a class="btn btn-danger"> 点击观看 </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="text-right" ><a ng-show="isHasMore" ng-click="loadMore()" class="btn btn-link">加载更多>></a></div>
+        <div ng-hide="isHasMore" class="alert alert-danger">
+          <span class="glyphicon glyphicon-alert"></span>
+          已经没有更多数据了！
+        </div>
+      </div>
+    </div>
+    <!-- 大陆\港台 -->
+    <div ng-controller="show_cha">
+      <div class="row">
+        <div class="alert alert-info">大陆\港台</div>
+        <ul class="list-unstyled">
+          <li class="col-sm-3 col-sm-6 col-xs-6" ng-repeat="vdo in show">
+            <img class="img-responsive" ng-src="../imgs/{{vdo.img}}" alt=""/>
+            <div class="half-mask">
+              <h4><a href="">{{vdo.name}} </a></h4>
+              <h5>主演：{{vdo.start}}</h5>
+              <p> 剧情介绍 ：{{vdo.detail}} <a href="#">了解更多</a>  </p>
+              <a class="btn btn-danger"> 点击观看 </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="text-right" ><a ng-show="isHasMore" ng-click="loadMore()" class="btn btn-link">加载更多>></a></div>
+        <div ng-hide="isHasMore" class="alert alert-danger">
+          <span class="glyphicon glyphicon-alert"></span>
+          已经没有更多数据了！
+        </div>
+      </div>
+    </div>
+
+    <!-- 日韩\亚洲风 -->
+    <div ng-controller="show_yz">
+      <div class="row">
+        <div class="alert alert-info">日韩\亚洲风</div>
+        <ul class="list-unstyled">
+          <li class="col-sm-3 col-sm-6 col-xs-6" ng-repeat="vdo in show">
+            <img class="img-responsive" ng-src="../imgs/{{vdo.img}}" alt=""/>
+            <div class="half-mask">
+              <h4><a href="">{{vdo.name}} </a></h4>
+              <h5>主演：{{vdo.start}}</h5>
+              <p> 剧情介绍 ：{{vdo.detail}} <a href="#">了解更多</a>  </p>
+              <a class="btn btn-danger"> 点击观看 </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="text-right" ><a ng-show="isHasMore" ng-click="loadMore()" class="btn btn-link">加载更多>></a></div>
+        <div ng-hide="isHasMore" class="alert alert-danger">
+          <span class="glyphicon glyphicon-alert"></span>
+          已经没有更多数据了！
+        </div>
+      </div>
+    </div>
+
+    <!-- 欧美\好莱坞 -->
+    <div ng-controller="show_hld">
+      <div class="row">
+        <div class="alert alert-info">欧美\好莱坞</div>
+        <ul class="list-unstyled">
+          <li class="col-sm-3 col-sm-6 col-xs-6" ng-repeat="vdo in show">
+            <img class="img-responsive" ng-src="../imgs/{{vdo.img}}" alt=""/>
+            <div class="half-mask">
+              <h4><a href="">{{vdo.name}} </a></h4>
+              <h5>主演：{{vdo.start}}</h5>
+              <p> 剧情介绍 ：{{vdo.detail}} <a href="#">了解更多</a>  </p>
+              <button class="btn btn-danger"> 点击观看 </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="text-right" ><a ng-show="isHasMore" ng-click="loadMore()" class="btn btn-link">加载更多>></a></div>
+        <div ng-hide="isHasMore" class="alert alert-danger">
+          <span class="glyphicon glyphicon-alert"></span>
+          已经没有更多数据了！
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/angular.js"></script>
+<script src="../js/movie_show.js"></script>
+</body>
+</html>

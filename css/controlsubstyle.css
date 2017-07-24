@@ -1,0 +1,44 @@
+body{
+  margin: 0;
+  font-family: 'SimHei';
+}
+
+@media screen and (min-width:500px) and (max-width:992px){
+  h3{
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .box{
+    background: #dfd;
+    border: 1px solid #383;
+    color:#383;
+    margin: 20px;
+    padding: 20px;
+  }
+}
+@media screen and (max-width:500px){
+  h3{
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .box{
+    background: #dff;
+    border: 1px solid #383;
+    color:#383;
+    margin: 20px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width:992px){
+  h3{
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .box{
+    background: #ffd;
+    border: 1px solid #383;
+    color:#383;
+    margin: 20px;
+    padding: 20px;
+  }
+}

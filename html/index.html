@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--为了兼容手机端，此上三个标签之前不能加东西-->
+  <title>Bootstrap 101 Template</title>
+
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../css/primary.css"/>
+</head>
+<body>
+  <div id="header" class="navbar navbar-default navbar-fixed-top"><!--导航-->
+    <div class="container">
+      <div class="navbar-header"><!--导航栏header部分-->
+        <a href="index.html" class="navbar-brand">Movie</a>
+        <a href="#my-collapse-menu" data-toggle="collapse" class="navbar-toggle">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+      </div>
+      <div class="navbar-collapse collapse" id="my-collapse-menu"><!--导航栏collapse部分-->
+        <ul class="nav navbar-nav">
+          <li><a href="user_center.html"><span id="music-user">我</span>喜欢的电影</a></li>
+          <li><a href="movie_show.html">发现新大陆</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li> <a href="#" data-toggle="modal">传送门:</a></li>
+          <li><a href="#register" data-toggle="modal">登录</a></li>
+          <li><a href="#login" data-toggle="modal">注册</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="banner"><!--轮播图部分-->
+   <div class="carousel slide" data-ride="carousel" data-interval="3000" id="banner-ad">
+     <div class="carousel-inner"><!--图的部分-->
+       <div class="item active">
+         <img src="../imgs/banner1.jpg" alt=""/>
+       </div>
+       <div class="item">
+         <img src="../imgs/banner2.jpg" alt=""/>
+       </div>
+       <div class="item">
+         <img src="../imgs/banner3.jpg" alt=""/>
+       </div>
+       <div class="item">
+         <img src="../imgs/banner4.jpg" alt=""/>
+       </div>
+       <div class="item">
+         <img src="../imgs/banner5.jpg" alt=""/>
+       </div>
+     </div>
+     <a href="#banner-ad" class="carousel-control left" data-slide="prev"><!--轮播图中的右箭头-->
+       <span class="glyphicon glyphicon-chevron-left"></span>
+     </a>
+     <a href="#banner-ad" class="carousel-control right" data-slide="next"><!--轮播图中的左箭头-->
+       <span class="glyphicon glyphicon-chevron-right"></span>
+     </a>
+     <ul class="carousel-indicators hidden-xs"><!--轮播图的小圆点部分-->
+       <li data-target="#banner-ad" data-slide-to="0" class="active"></li>
+       <li data-target="#banner-ad" data-slide-to="1"></li>
+       <li data-target="#banner-ad" data-slide-to="2"></li>
+       <li data-target="#banner-ad" data-slide-to="3"></li>
+       <li data-target="#banner-ad" data-slide-to="4"></li>
+     </ul>
+     <input id="search" type="text" class="form-control" placeholder="喜欢就搜呗"/>
+   </div>
+  </div>
+  <div id="main">
+    <div class="container">
+      <div class="row first-child"><!--推荐电影部分-->
+        <div class="col-sm-3">
+          <div class="img-responsive img-circle text-center front">
+            汤姆·克鲁斯 (Tom Cruise)<br>
+            <small>美国 纽约州</small>
+          </div>
+          <img src="../imgs/track_of_the_week1.jpg" class="img-responsive img-circle back"/>
+          <h3 class="text-center">
+            <a href="believe.html">
+              汤姆·克鲁斯 (Tom Cruise)<br>
+              <small>美国 纽约州</small>
+            </a>
+          </h3>
+        </div>
+        <div class="col-sm-3">
+          <div class="img-responsive img-circle text-center front">
+            道恩·强森（Dwayne Johnson）<br>
+            <small>美国 加利福尼亚州</small>
+          </div>
+          <img src="../imgs/track_of_the_week3.jpg" class="img-responsive img-circle back"/>
+          <h3 class="text-center">
+            <a href="believe.html">
+              道恩·强森（Dwayne Johnson）<br>
+              <small>美国 加利福尼亚州</small>
+            </a>
+          </h3>
+        </div>
+        <div class="col-sm-3">
+          <div class="img-responsive img-circle text-center front">
+            米拉·乔沃维奇（Milla Jovovich）<br>
+            <small>乌克兰 基辅</small>
+          </div>
+          <img src="../imgs/track_of_the_week4.jpg" class="img-responsive img-circle back"/>
+          <h3 class="text-center">
+            <a href="believe.html">
+              米拉·乔沃维奇（Milla Jovovich）<br>
+              <small>乌克兰 基辅</small>
+            </a>
+          </h3>
+        </div>
+        <div class="col-sm-3">
+          <div class="img-responsive img-circle text-center front">
+            尼古拉斯·凯奇（Nicolas Cage）<br>
+            <small>美国 加利福利亚州</small>
+          </div>
+          <img src="../imgs/track_of_the_week_ferris.jpg" class="img-responsive img-circle back"/>
+          <h3 class="text-center">
+            <a href="believe.html">
+              尼古拉斯·凯奇（Nicolas Cage）<br>
+              <small>美国 加利福利亚州</small>
+            </a>
+          </h3>
+        </div>
+        <div class="col-sm-3">
+          <div class="img-responsive img-circle text-center front">
+            莱昂纳多·迪卡普里奥（Leonardo DiCaprio<br>
+            <small>美国 洛杉矶</small>
+          </div>
+          <img src="../imgs/track_of_the_week_royksopp.jpg" class="img-responsive img-circle back"/>
+          <h3 class="text-center">
+            <a href="believe.html">
+              莱昂纳多·迪卡普里奥（Leonardo DiCaprio<br>
+              <small>美国 洛杉矶</small>
+            </a>
+          </h3>
+        </div>
+        <div class="col-sm-3">
+          <div class="img-responsive img-circle text-center front">
+            高圆圆 (yuanyuan Gao)<br>
+            <small>中国 大陆</small>
+          </div>
+          <img src="../imgs/track_of_the_week_plaid.jpg" class="img-responsive img-circle back"/>
+          <h3 class="text-center">
+            <a href="believe.html">
+              高圆圆 (yuanyuan Gao)<br>
+              <small>中国 大陆</small>
+            </a>
+          </h3>
+        </div>
+        <div class="col-sm-3">
+          <div class="img-responsive img-circle text-center front">
+            安吉丽娜·朱莉 (Angelina Jolie)<br>
+            <small>美国/柬埔寨（双重国籍）</small>
+          </div>
+          <img src="../imgs/track_of_the_week_seven_lions.jpg" class="img-responsive img-circle back"/>
+          <h3 class="text-center">
+            <a href="believe.html">
+              安吉丽娜·朱莉 (Angelina Jolie)<br>
+              <small>美国/柬埔寨（双重国籍）</small>
+            </a>
+          </h3>
+        </div>
+        <div class="col-sm-3">
+          <div class="img-responsive img-circle text-center front">
+            杰森·斯坦森（Jason Statham）<br>
+            <small>英国 德比郡</small>+
+          </div>
+          <img src="../imgs/track_of_the_week_lazerhawk.jpg" class="img-responsive img-circle back"/>
+          <h3 class="text-center">
+            <a href="believe.html">
+              杰森·斯坦森（Jason Statham）<br>
+              <small>英国 德比郡</small>+
+            </a>
+          </h3>
+        </div>
+      </div>
+      <div class="row second-child"><!--分区-->
+        <div class="col-sm-5"><!--提示图-->
+          <div class="row">
+            <div class="col-xs-11 col-sm-offset-1">
+              <div class="wrapper">
+                <img src="../imgs/clear_music.jpg">
+                <span class="information">
+                  <strong>那些年的风轻云淡，飞鸟蓝天</strong>如果声音可以清洗雾霾的天空，如果文字可以泛起心灵的一丝涟漪。
+                </span>
+              </div>
+            </div>
+            <div class="col-xs-12 hidden-xs">
+              <svg width="100%" height="100%"></svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-sm-offset-1">
+          <ul class="list-unstyled" >
+            <li class="hd"><a href="believe.html">第五波 <small>主演: 科洛·莫瑞兹</small></a><small class="fr">总有一些科幻片值得去观看</small></li>
+            <li class="row active">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/believe.jpg"/>
+                <a href="believe.html" class="fl">第五波 <br/><small>主演: 科洛·莫瑞兹</small></a>
+              </div>
+              <small class="col-xs-8">
+                  <img src="../imgs/usr1.gif" class="img-responsive fl"/>
+                  <span class="fr">我发现个问题，为什么很多外星入侵地球的电影，外星人的形态很多都和星际争霸里虫族差不多。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">分歧者3：忠诚世界<small>主演: 谢琳·伍德蕾</small></a><small class="fr">最后的最后一切归于平静，我看见了 那个你。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr2.jpg"/>
+                <a href="believe.html" class="fl">分歧者3<br/><small>主演: 谢琳·伍德蕾</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user2.jpg" class="img-responsive fl"/>
+                <span class="fr">真的对这类电影审美疲劳了，情节啊动作啊都没法吸引我。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">完美陌生人<small>主演:吉塞培·巴蒂斯通</small></a><small class="fr">七个常年的好朋友聚在一起吃晚餐。……</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr3.jpg"/>
+                <a href="believe.html" class="fl">完美陌生人<br/><small>吉塞培·巴蒂斯通</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user3.jpg" class="img-responsive fl"/>
+                <span class="fr">七个常年的好朋友聚在一起吃晚餐。……</span>
+              </small>
+            </li>
+            <li><a href="believe.html">遇见你之前<small>主演: 戴佩妮</small></a><small class="fr">为了让威尔重新展开笑颜，两人重新找到人生与心灵的归属。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr4.jpg"/>
+                <a href="believe.html" class="fl">遇见你之前 <br/><small>戴佩妮主演: 戴佩妮</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user4.jpg" class="img-responsive fl"/>
+                <span class="fr">为了让威尔重新展开笑颜，两人重新找到人生与心灵的归属。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">人类清除计划3<small>主演: 弗兰克·格里罗</small></a><small class="fr">美国一年一度的国定杀戮日，所有政府紧急服务全面暂停。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr5.jpg"/>
+                <a href="believe.html" class="fl">人类清除计划3<br/><small>弗兰克·格里罗</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user5.jpg" class="img-responsive fl"/>
+                <span class="fr">美国一年一度的国定杀戮日，所有政府紧急服务全面暂停。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">天空之眼<small>主演: 海伦·米伦</small></a><small class="fr">原本单纯的跨国逮捕行动瞬间变成复杂难解的反恐任务……</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr6.jpg"/>
+                <a href="believe.html" class="fl">天空之眼<br/><small>主演: 海伦·米伦</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user6.jpg" class="img-responsive fl"/>
+                <span class="fr">原本单纯的跨国逮捕行动瞬间变成复杂难解的反恐任务……</span>
+              </small>
+            </li>
+            <li><a href="believe.html">这个杀手不太冷<small>主演: 让·雷诺 </small></a><small class="fr">孤独的职业杀手，受人雇佣</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr7.jpg"/>
+                <a href="believe.html" class="fl">这个杀手不太冷<br/><small>让·雷诺 </small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user7.jpg" class="img-responsive fl"/>
+                <span class="fr">孤独的职业杀手，受人雇佣</span>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row second-child">
+        <div class="col-sm-4 col-sm-offset-2 col-sm-push-5"><!--提示图-->
+          <div class="row">
+            <div class="col-xs-11 col-sm-offset-1">
+              <div class="wrapper">
+                <img src="../imgs/clear_music2.jpg">
+                <span class="information">
+                  <strong>那些年的风轻云淡，飞鸟蓝天</strong>如果声音可以清洗雾霾的天空，如果文字可以泛起心灵的一丝涟漪。
+                </span>
+              </div>
+            </div>
+            <div class="col-xs-12 hidden-xs">
+              <svg width="100%" height="100%"></svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-sm-pull-6">
+          <ul class="list-unstyled" >
+            <li class="hd"><a href="believe.html">第五波 <small>主演: 科洛·莫瑞兹</small></a><small class="fr">总有一些科幻片值得去观看</small></li>
+            <li class="row active">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/believe.jpg"/>
+                <a href="believe.html" class="fl">第五波 <br/><small>主演: 科洛·莫瑞兹</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/usr1.gif" class="img-responsive fl"/>
+                <span class="fr">我发现个问题，为什么很多外星入侵地球的电影，外星人的形态很多都和星际争霸里虫族差不多。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">分歧者3：忠诚世界<small>主演: 谢琳·伍德蕾</small></a><small class="fr">最后的最后一切归于平静，我看见了 那个你。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr2.jpg"/>
+                <a href="believe.html" class="fl">分歧者3<br/><small>主演: 谢琳·伍德蕾</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user2.jpg" class="img-responsive fl"/>
+                <span class="fr">真的对这类电影审美疲劳了，情节啊动作啊都没法吸引我。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">完美陌生人<small>主演:吉塞培·巴蒂斯通</small></a><small class="fr">七个常年的好朋友聚在一起吃晚餐。……</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr3.jpg"/>
+                <a href="believe.html" class="fl">完美陌生人<br/><small>吉塞培·巴蒂斯通</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user3.jpg" class="img-responsive fl"/>
+                <span class="fr">七个常年的好朋友聚在一起吃晚餐。……</span>
+              </small>
+            </li>
+            <li><a href="believe.html">遇见你之前<small>主演: 戴佩妮</small></a><small class="fr">为了让威尔重新展开笑颜，两人重新找到人生与心灵的归属。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr4.jpg"/>
+                <a href="believe.html" class="fl">遇见你之前 <br/><small>戴佩妮主演: 戴佩妮</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user4.jpg" class="img-responsive fl"/>
+                <span class="fr">为了让威尔重新展开笑颜，两人重新找到人生与心灵的归属。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">人类清除计划3<small>主演: 弗兰克·格里罗</small></a><small class="fr">美国一年一度的国定杀戮日，所有政府紧急服务全面暂停。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr5.jpg"/>
+                <a href="believe.html" class="fl">人类清除计划3<br/><small>弗兰克·格里罗</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user5.jpg" class="img-responsive fl"/>
+                <span class="fr">美国一年一度的国定杀戮日，所有政府紧急服务全面暂停。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">天空之眼<small>主演: 海伦·米伦</small></a><small class="fr">原本单纯的跨国逮捕行动瞬间变成复杂难解的反恐任务……</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr6.jpg"/>
+                <a href="believe.html" class="fl">天空之眼<br/><small>主演: 海伦·米伦</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user6.jpg" class="img-responsive fl"/>
+                <span class="fr">原本单纯的跨国逮捕行动瞬间变成复杂难解的反恐任务……</span>
+              </small>
+            </li>
+            <li><a href="believe.html">这个杀手不太冷<small>主演: 让·雷诺 </small></a><small class="fr">孤独的职业杀手，受人雇佣</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr7.jpg"/>
+                <a href="believe.html" class="fl">这个杀手不太冷<br/><small>让·雷诺 </small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user7.jpg" class="img-responsive fl"/>
+                <span class="fr">孤独的职业杀手，受人雇佣</span>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row second-child"><!--分区-->
+        <div class="col-sm-5"><!--提示图-->
+          <div class="row">
+            <div class="col-xs-11 col-sm-offset-1">
+              <div class="wrapper">
+                <img src="../imgs/clear_music3.jpg">
+                <span class="information">
+                  <strong>那些年的风轻云淡，飞鸟蓝天</strong>如果声音可以清洗雾霾的天空，如果文字可以泛起心灵的一丝涟漪。
+                </span>
+              </div>
+            </div>
+            <div class="col-xs-12 hidden-xs">
+              <svg width="100%" height="100%"></svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-sm-offset-1">
+          <ul class="list-unstyled" >
+            <li class="hd"><a href="believe.html">第五波 <small>主演: 科洛·莫瑞兹</small></a><small class="fr">总有一些科幻片值得去观看</small></li>
+            <li class="row active">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/believe.jpg"/>
+                <a href="believe.html" class="fl">第五波 <br/><small>主演: 科洛·莫瑞兹</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/usr1.gif" class="img-responsive fl"/>
+                <span class="fr">我发现个问题，为什么很多外星入侵地球的电影，外星人的形态很多都和星际争霸里虫族差不多。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">分歧者3：忠诚世界<small>主演: 谢琳·伍德蕾</small></a><small class="fr">最后的最后一切归于平静，我看见了 那个你。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr2.jpg"/>
+                <a href="believe.html" class="fl">分歧者3<br/><small>主演: 谢琳·伍德蕾</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user2.jpg" class="img-responsive fl"/>
+                <span class="fr">真的对这类电影审美疲劳了，情节啊动作啊都没法吸引我。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">完美陌生人<small>主演:吉塞培·巴蒂斯通</small></a><small class="fr">七个常年的好朋友聚在一起吃晚餐。……</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr3.jpg"/>
+                <a href="believe.html" class="fl">完美陌生人<br/><small>吉塞培·巴蒂斯通</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user3.jpg" class="img-responsive fl"/>
+                <span class="fr">七个常年的好朋友聚在一起吃晚餐。……</span>
+              </small>
+            </li>
+            <li><a href="believe.html">遇见你之前<small>主演: 戴佩妮</small></a><small class="fr">为了让威尔重新展开笑颜，两人重新找到人生与心灵的归属。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr4.jpg"/>
+                <a href="believe.html" class="fl">遇见你之前 <br/><small>戴佩妮主演: 戴佩妮</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user4.jpg" class="img-responsive fl"/>
+                <span class="fr">为了让威尔重新展开笑颜，两人重新找到人生与心灵的归属。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">人类清除计划3<small>主演: 弗兰克·格里罗</small></a><small class="fr">美国一年一度的国定杀戮日，所有政府紧急服务全面暂停。</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr5.jpg"/>
+                <a href="believe.html" class="fl">人类清除计划3<br/><small>弗兰克·格里罗</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user5.jpg" class="img-responsive fl"/>
+                <span class="fr">美国一年一度的国定杀戮日，所有政府紧急服务全面暂停。</span>
+              </small>
+            </li>
+            <li><a href="believe.html">天空之眼<small>主演: 海伦·米伦</small></a><small class="fr">原本单纯的跨国逮捕行动瞬间变成复杂难解的反恐任务……</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr6.jpg"/>
+                <a href="believe.html" class="fl">天空之眼<br/><small>主演: 海伦·米伦</small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user6.jpg" class="img-responsive fl"/>
+                <span class="fr">原本单纯的跨国逮捕行动瞬间变成复杂难解的反恐任务……</span>
+              </small>
+            </li>
+            <li><a href="believe.html">这个杀手不太冷<small>主演: 让·雷诺 </small></a><small class="fr">孤独的职业杀手，受人雇佣</small></li>
+            <li class="row hd">
+              <div class="col-xs-4">
+                <img class="img-responsive fl" src="../imgs/usr7.jpg"/>
+                <a href="believe.html" class="fl">这个杀手不太冷<br/><small>让·雷诺 </small></a>
+              </div>
+              <small class="col-xs-8">
+                <img src="../imgs/user7.jpg" class="img-responsive fl"/>
+                <span class="fr">孤独的职业杀手，受人雇佣</span>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="container">
+    <div class="row">
+      <a href="#" class="col-sm-1 col-xs-3 col-sm-offset-2">
+        <img class="img-responsive" src="../imgs/icon_input.png">
+      </a>
+      <a href="#" class="col-sm-1 col-xs-3">
+        <img class="img-responsive" src="../imgs/icon_about.png">
+      </a>
+      <a href="#" class="col-sm-1 col-xs-3">
+        <img class="img-responsive" src="../imgs/icon_mail.png">
+      </a>
+      <a href="#" class="col-sm-1 col-xs-3">
+        <img class="img-responsive" src="../imgs/icon_fb.png">
+      </a>
+      <a href="#" class="col-sm-1 col-xs-3">
+        <img class="img-responsive" src="../imgs/icon_tw.png">
+      </a>
+      <a href="#" class="col-sm-1 col-xs-3">
+        <img class="img-responsive" src="../imgs/icon_instagram.png">
+      </a>
+      <a href="#" class="col-sm-1 col-xs-3">
+        <img class="img-responsive" src="../imgs/icon_gplus.png">
+      </a>
+      <a href="#" class="col-sm-1 col-xs-3">
+        <img class="img-responsive" src="../imgs/icon_press.png">
+      </a>
+    </div>
+  </div>
+  <div class="modal" id="register" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="close" data-dismiss="modal">&times;</span>
+        <div class="modal-header">
+          用户登录 <span></span>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="form-horizontal" id="from-register">
+			<div class="form-group">
+              <div class="col-sm-2 col-xs-4 text-right">
+                <label for="username" class="control-label">用户名</label>
+              </div>
+              <div class="col-sm-7 col-xs-8">
+                <input id="username" name="username" type="text" class="form-control" placeholder="2-9位的中文，英文或数字..."/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-2 col-xs-4 text-right">
+                 <label for="userpwd" class="control-label">密码</label>
+              </div>
+              <div class="col-sm-7 col-xs-8">
+                <input id="userpwd" name="userpwd" type="password" class="form-control" placeholder="8-12位数字，字母，下划线组合..."/>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+		  <a href="#" class="btn bg-info" id="register-btn">登录</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="login" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="close" data-dismiss="modal">&times;</span>
+        <div class="modal-header">
+          用户注册 <span></span>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="form-horizontal" id="from-login">
+            <div class="form-group">
+              <div class="col-sm-2 col-xs-4 text-right">
+                <label for="uname" class="control-label">用户名</label>
+              </div>
+              <div class="col-sm-6 col-xs-8">
+                <input id="uname" name="uname" type="text" class="form-control" placeholder="2-9位的中文，英文或数字..."/>
+              </div>
+              <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+                <span class="help-block"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-2 col-xs-4 text-right">
+                <label for="upwd" class="control-label">密码</label>
+              </div>
+              <div class="col-sm-6 col-xs-8">
+                <input id="upwd" name="upwd" type="password" class="form-control" placeholder="6-12位数字，字母，下划线组合..."/>
+              </div>
+              <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+                <span class="help-block"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-2 col-xs-4 text-right">
+                <label for="rpwd" class="control-label">确认密码</label>
+              </div>
+              <div class="col-sm-6 col-xs-8">
+                <input id="rpwd" name="rpwd" type="password" class="form-control" placeholder="请再次输入您的密码..."/>
+              </div>
+              <div class="col-sm-4 col-xs-offset-4 col-sm-offset-0">
+                <span class="help-block"></span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn bg-info" id="login-btn">注册</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- <script src="../js/jquery-1.11.3.js"></script> -->
+<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/primary.js"></script>
+</body>
+</html>
+
+
